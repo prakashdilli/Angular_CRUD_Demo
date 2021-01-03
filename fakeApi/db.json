@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "firstName": "test 1",
+      "lastName": "tewts",
+      "contactNumber": 454,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "firstName": "sdfgsdfg",
+      "lastName": "sdgfdf",
+      "contactNumber": 35345
+    }
+  ]
+}
