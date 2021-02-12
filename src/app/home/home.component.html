@@ -1,0 +1,43 @@
+<!-- <p>Hero List</p>
+
+<button [disabled]="isDisabled">Submit</button>
+<button disabled>Submit</button>
+
+
+<h3>{{today | date:'M/d/yy'}}</h3>
+<h3 (click)="clickedMe()">Click Me</h3>
+
+{{test == 2}}
+<input *ngIf="test == 2" type="text" [(ngModel)]="inputText">
+
+<ul>
+   <li *ngFor="let fruit of fruits">
+       {{ fruit['fruitName'] }}
+   </li>
+</ul>
+
+{{inputText}}
+
+ -->
+
+<div class="add-form">
+    <input type="text" placeholder="Name" [(ngModel)]="user['name']">
+    <input type="number" placeholder="Age" [(ngModel)]="user['age']">
+    <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
+    <button *ngIf="isUpdate" (click)="updateUser()">Update User</button>
+</div>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let user of usersList;let i = index;">
+        <td>{{user['id']}}</td>
+        <td>{{user['name']}}</td>
+        <td>{{user['age']}}</td>
+        <td><button (click)="editUser(user)">Edit</button></td>
+        <td><button (click)="deleteUser(user,i)">Delete</button></td>
+    </tr>
+</table>
